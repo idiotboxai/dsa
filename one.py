@@ -9,21 +9,21 @@ def linear_probing(telephone_no):
             hash_table[index] = telephone_no
             print("\nRecord Inserted")
             break
-        else:
-            print("Table Full, Record Cannot be Inserted")
+    else:
+        print("Table Full, Record Cannot be Inserted")
 
 def Quadratic(telephone_no):
-    i=0
+    i = 0
     for i in range(size):
         index = (telephone_no % size + i * i) % size
         if hash_table[index] == -1:
             hash_table[index] = telephone_no
             print("Record Inserted")
             break
-        else:
-            i += 1
-            if i == size:
-                print("Element Cannot be inserted")
+    else:
+        i += 1
+        if i == size:
+            print("Element Cannot be inserted")
 
 def search(telephone_no):
     count = 1
